@@ -9,8 +9,8 @@ public class JsonMapperTest {
     @Test
     void JSON文字列をオブジェクトに変換できる() {
         String json = "{\n" +
-                "    \"username\": \"akihiro\",\n" +
-                "    \"password\": \"nishikawa123\"\n" +
+                "    \"username\": \"taro\",\n" +
+                "    \"password\": \"password123\"\n" +
                 "}";
         JSONObject jsonObject = new JSONObject(json);
         assertEquals("akihiro", jsonObject.get("username"));
