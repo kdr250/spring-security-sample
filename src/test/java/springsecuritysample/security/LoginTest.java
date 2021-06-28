@@ -27,8 +27,8 @@ public class LoginTest {
     @Test
     void 認証することができる() throws Exception {
         String json = "{\n" +
-                "    \"username\": \"akihiro\",\n" +
-                "    \"password\": \"nishikawa123\"\n" +
+                "    \"username\": \"taro\",\n" +
+                "    \"password\": \"password123\"\n" +
                 "}";
         mockMvc.perform(
             MockMvcRequestBuilders.post("/api/login")
