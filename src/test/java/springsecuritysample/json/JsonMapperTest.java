@@ -13,6 +13,6 @@ public class JsonMapperTest {
                 "    \"password\": \"password123\"\n" +
                 "}";
         JSONObject jsonObject = new JSONObject(json);
-        assertEquals("akihiro", jsonObject.get("username"));
+        assertEquals("taro", jsonObject.get("username"));
     }
 }
