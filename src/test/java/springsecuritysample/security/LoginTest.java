@@ -37,4 +37,18 @@ public class LoginTest {
         )
                 .andExpect(status().isNoContent());
     }
+
+    @Test
+    void 誤ったusernameとpasswordだと認証失敗する() throws Exception {
+        String json = "{\n" +
+                "    \"username\": \"taro1\",\n" +
+                "    \"password\": \"password123\"\n" +
+                "}";
+        mockMvc.perform(
+            MockMvcRequestBuilders.post("/api/login")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(json)
+        )
+                .andExpect(status().isUnauthorized());
+    }
 }
