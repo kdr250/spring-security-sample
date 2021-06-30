@@ -18,10 +18,10 @@ public class LoginTest {
     private MockMvc mockMvc;
 
     @Test
-    void 認証しないとUnAuthorizedを返す() throws Exception {
+    void 認証しないとForbiddenを返す() throws Exception {
         mockMvc.perform(
             MockMvcRequestBuilders.get("/")
-        ).andExpect(status().isUnauthorized());
+        ).andExpect(status().isForbidden());
     }
 
     @Test
@@ -36,5 +36,19 @@ public class LoginTest {
                 .content(json)
         )
                 .andExpect(status().isNoContent());
+    }
+
+    @Test
+    void 誤ったusernameとpasswordだと認証失敗する() throws Exception {
+        String json = "{\n" +
+                "    \"username\": \"taro1\",\n" +
+                "    \"password\": \"password123\"\n" +
+                "}";
+        mockMvc.perform(
+            MockMvcRequestBuilders.post("/api/login")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(json)
+        )
+                .andExpect(status().isUnauthorized());
     }
 }
