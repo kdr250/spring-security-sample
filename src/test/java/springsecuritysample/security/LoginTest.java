@@ -18,10 +18,10 @@ public class LoginTest {
     private MockMvc mockMvc;
 
     @Test
-    void 認証しないとUnAuthorizedを返す() throws Exception {
+    void 認証しないとForbiddenを返す() throws Exception {
         mockMvc.perform(
             MockMvcRequestBuilders.get("/")
-        ).andExpect(status().isUnauthorized());
+        ).andExpect(status().isForbidden());
     }
 
     @Test
