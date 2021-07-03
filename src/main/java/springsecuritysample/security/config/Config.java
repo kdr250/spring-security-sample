@@ -30,6 +30,8 @@ public class Config extends WebSecurityConfigurerAdapter {
                 .authorizeRequests(customizer ->
                     customizer
                         .mvcMatchers("/api/login").permitAll()
+                        .mvcMatchers("/api/user").hasRole("USER")
+                        .mvcMatchers("/api/admin").hasRole("ADMIN")
                         .anyRequest().denyAll()
                 )
                 .csrf().disable();
