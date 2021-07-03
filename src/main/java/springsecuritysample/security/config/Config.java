@@ -4,6 +4,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import springsecuritysample.security.filter.UsernamePasswordJsonAuthenticationFilter;
 import springsecuritysample.security.handler.ApiAuthenticationSuccessHandler;
@@ -15,8 +16,11 @@ public class Config extends WebSecurityConfigurerAdapter {
 
     private final DataSource dataSource;
 
-    public Config(DataSource dataSource) {
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    public Config(DataSource dataSource, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.dataSource = dataSource;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
     @Override
@@ -35,7 +39,8 @@ public class Config extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .jdbcAuthentication()
-                .dataSource(dataSource);
+                .dataSource(dataSource)
+                .passwordEncoder(bCryptPasswordEncoder);
     }
 
     private UsernamePasswordJsonAuthenticationFilter usernamePasswordJsonAuthenticationFilter() throws Exception {
