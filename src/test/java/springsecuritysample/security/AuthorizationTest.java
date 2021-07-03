@@ -7,6 +7,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpSession;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -79,6 +80,27 @@ public class AuthorizationTest {
         mockMvc.perform(
                 MockMvcRequestBuilders.get("/api/admin")
                         .cookie(cookie)
+        )
+                .andExpect(status().isForbidden());
+    }
+
+    @Test
+    @WithMockUser("taro")
+    void 簡単_USER権限を持っている人はUSER権限が必要なパスにリクエストできる() throws Exception {
+        MvcResult result = mockMvc.perform(
+                MockMvcRequestBuilders.get("/api/user")
+        )
+                .andExpect(status().isOk())
+                .andReturn();
+
+        assertEquals("USER画面です", result.getResponse().getContentAsString());
+    }
+
+    @Test
+    @WithMockUser("taro")
+    void 簡単_USER権限を持っている人はADMIN権限が必要なパスにリクエストできない() throws Exception {
+        mockMvc.perform(
+                MockMvcRequestBuilders.get("/api/admin")
         )
                 .andExpect(status().isForbidden());
     }
