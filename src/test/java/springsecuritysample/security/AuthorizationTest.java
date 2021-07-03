@@ -13,6 +13,8 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.transaction.annotation.Transactional;
 import springsecuritysample.security.service.UserService;
 
+import javax.servlet.http.Cookie;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -46,11 +48,11 @@ public class AuthorizationTest {
                 .andExpect(status().isNoContent())
                 .andReturn();
 
-        MockHttpSession session = (MockHttpSession) loginResult.getRequest().getSession();
+        Cookie cookie = loginResult.getResponse().getCookie("SESSION");
 
         MvcResult result = mockMvc.perform(
                 MockMvcRequestBuilders.get("/api/user")
-                    .session(session)
+                    .cookie(cookie)
         )
                 .andExpect(status().isOk())
                 .andReturn();
@@ -72,11 +74,11 @@ public class AuthorizationTest {
                 .andExpect(status().isNoContent())
                 .andReturn();
 
-        MockHttpSession session = (MockHttpSession) loginResult.getRequest().getSession();
+        Cookie cookie = loginResult.getResponse().getCookie("SESSION");
 
         mockMvc.perform(
                 MockMvcRequestBuilders.get("/api/admin")
-                        .session(session)
+                        .cookie(cookie)
         )
                 .andExpect(status().isForbidden());
     }
