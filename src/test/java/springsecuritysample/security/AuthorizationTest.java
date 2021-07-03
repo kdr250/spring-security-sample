@@ -58,7 +58,7 @@ public class AuthorizationTest {
                 .andExpect(status().isOk())
                 .andReturn();
 
-        assertEquals("USER画面です", result.getResponse().getContentAsString());
+        assertEquals("taroのUSER画面です", result.getResponse().getContentAsString());
     }
 
     @Test
@@ -93,7 +93,7 @@ public class AuthorizationTest {
                 .andExpect(status().isOk())
                 .andReturn();
 
-        assertEquals("USER画面です", result.getResponse().getContentAsString());
+        assertEquals("taroのUSER画面です", result.getResponse().getContentAsString());
     }
 
     @Test
