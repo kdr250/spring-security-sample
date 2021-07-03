@@ -1,0 +1,12 @@
+version: "3"
+services:
+  mysql:
+    container_name: spring-security-sample-mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: spring_security_sample_mysql
+      MYSQL_ROOT_PASSWORD: mysql
+    ports:
+      - 13306:3306
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d

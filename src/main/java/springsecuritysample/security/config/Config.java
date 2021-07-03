@@ -4,13 +4,25 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import springsecuritysample.security.filter.UsernamePasswordJsonAuthenticationFilter;
 import springsecuritysample.security.handler.ApiAuthenticationSuccessHandler;
 
+import javax.sql.DataSource;
+
 @EnableWebSecurity
 public class Config extends WebSecurityConfigurerAdapter {
+
+    private final DataSource dataSource;
+
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    public Config(DataSource dataSource, BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.dataSource = dataSource;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -26,9 +38,9 @@ public class Config extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
-                .inMemoryAuthentication().withUser("taro").password("password123").roles("USER")
-                .and()
-                .passwordEncoder(NoOpPasswordEncoder.getInstance());
+                .jdbcAuthentication()
+                .dataSource(dataSource)
+                .passwordEncoder(bCryptPasswordEncoder);
     }
 
     private UsernamePasswordJsonAuthenticationFilter usernamePasswordJsonAuthenticationFilter() throws Exception {
