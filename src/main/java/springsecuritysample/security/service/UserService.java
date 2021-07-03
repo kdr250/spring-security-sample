@@ -21,7 +21,7 @@ public class UserService {
         UserDetails user = User
                 .withUsername(username)
                 .password(bCryptPasswordEncoder.encode(password))
-                .authorities("ROLE_ADMIN")
+                .authorities("ROLE_USER")
                 .build();
         jdbcUserDetailsManager.createUser(user);
     }
