@@ -15,11 +15,9 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        env:
-          BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/reports/tests/test
-          destination_dir: ${BRANCH_NAME}
+          destination_dir: ${{ steps.extract_branch.outputs.branch }}
           publish_branch: document
           exclude_assets: '.github,build/reports/tests/test/js/**.js,build/reports/tests/test/css/**.css'
