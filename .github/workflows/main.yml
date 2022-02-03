@@ -22,4 +22,4 @@ jobs:
           publish_dir: ./build/reports/tests/test
           destination_dir: ${BRANCH_NAME}
           publish_branch: document
-          exclude_assets: '.github,build/reports/tests/test/**.js,build/reports/tests/test/**.css'
+          exclude_assets: '.github,build/reports/tests/test/js/**.js,build/reports/tests/test/css/**.css'
