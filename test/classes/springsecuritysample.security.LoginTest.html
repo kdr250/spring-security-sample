@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.010s</div>
+<div class="counter">0.008s</div>
 <p>duration</p>
 </div>
 </td>
@@ -636,7 +636,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 </thead>
 <tr>
 <td class="failures">認証しないとForbiddenを返す()</td>
-<td class="failures">0.009s</td>
+<td class="failures">0.006s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
@@ -646,7 +646,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 </tr>
 <tr>
 <td class="failures">誤ったusernameとpasswordだと認証失敗する()</td>
-<td class="failures">0s</td>
+<td class="failures">0.001s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -654,12 +654,12 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2022-02-03 04:00:48.968  INFO 1761 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [springsecuritysample.security.LoginTest], using SpringBootContextLoader
-2022-02-03 04:00:48.969  INFO 1761 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [springsecuritysample.security.LoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-02-03 04:00:48.969  INFO 1761 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [springsecuritysample.security.LoginTest]: LoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-02-03 04:00:48.972  INFO 1761 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration springsecuritysample.SpringSecuritySampleApplication for test class springsecuritysample.security.LoginTest
-2022-02-03 04:00:48.973  INFO 1761 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-02-03 04:00:48.974  INFO 1761 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@f1a00f1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c4adf0, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@42eaec39, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@316a3a0f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6ea8b95b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4b263253, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5eb8942a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ee267b0, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@15ab7356, org.springframework.test.context.event.EventPublishingTestExecutionListener@6f657f1a, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@75e6bf18, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@589489f3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@166b6074, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5232500c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@126c2b2d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6ecbf382, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@23ee46ef]
+<pre>2022-02-03 04:15:46.271  INFO 1701 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [springsecuritysample.security.LoginTest], using SpringBootContextLoader
+2022-02-03 04:15:46.273  INFO 1701 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [springsecuritysample.security.LoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-02-03 04:15:46.273  INFO 1701 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [springsecuritysample.security.LoginTest]: LoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-02-03 04:15:46.276  INFO 1701 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration springsecuritysample.SpringSecuritySampleApplication for test class springsecuritysample.security.LoginTest
+2022-02-03 04:15:46.278  INFO 1701 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-02-03 04:15:46.279  INFO 1701 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@124f57, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@193c9a67, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@72e9264a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@f2a1f9c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1d5091d9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6042cfb6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5b226e82, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@42b5c85, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@1decdb80, org.springframework.test.context.event.EventPublishingTestExecutionListener@6ba598f4, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@233bbd7c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7daa12ea, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6e1e604, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@41c4ac14, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3f6a390d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@12fa5148, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1ba244d5]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -669,7 +669,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.2)
 
-2022-02-03 04:00:48.997  WARN 1761 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2022-02-03 04:15:46.311  WARN 1701 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -678,16 +678,16 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2022-02-03 04:00:48.998  INFO 1761 --- [    Test worker] springsecuritysample.security.LoginTest  : Starting LoginTest using Java 11.0.13 on fv-az93-644 with PID 1761 (started by runner in /home/runner/work/spring-security-sample/spring-security-sample)
-2022-02-03 04:00:48.999  INFO 1761 --- [    Test worker] springsecuritysample.security.LoginTest  : No active profile set, falling back to default profiles: default
-2022-02-03 04:00:49.249  INFO 1761 --- [    Test worker] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
-2022-02-03 04:00:49.540 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/api/login']
-2022-02-03 04:00:49.542 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/api/user']
-2022-02-03 04:00:49.543 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/api/admin']
-2022-02-03 04:00:49.543 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [denyAll] for any request
-2022-02-03 04:00:49.553  INFO 1761 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a5239d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@433ec7fb, org.springframework.security.web.header.HeaderWriterFilter@643bc598, org.springframework.security.web.authentication.logout.LogoutFilter@507ab5ce, springsecuritysample.security.filter.UsernamePasswordJsonAuthenticationFilter@7764a740, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73d67daf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49fb7148, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20ee0034, org.springframework.security.web.session.SessionManagementFilter@4a2cd6b2, org.springframework.security.web.access.ExceptionTranslationFilter@614a3249, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77252fef]
-2022-02-03 04:00:49.745  INFO 1761 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
-2022-02-03 04:00:50.752 ERROR 1761 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Exception during pool initialization.
+2022-02-03 04:15:46.321  INFO 1701 --- [    Test worker] springsecuritysample.security.LoginTest  : Starting LoginTest using Java 11.0.13 on fv-az224-698 with PID 1701 (started by runner in /home/runner/work/spring-security-sample/spring-security-sample)
+2022-02-03 04:15:46.325  INFO 1701 --- [    Test worker] springsecuritysample.security.LoginTest  : No active profile set, falling back to default profiles: default
+2022-02-03 04:15:46.539  INFO 1701 --- [    Test worker] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2022-02-03 04:15:46.684 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/api/login']
+2022-02-03 04:15:46.685 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/api/user']
+2022-02-03 04:15:46.685 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/api/admin']
+2022-02-03 04:15:46.685 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [denyAll] for any request
+2022-02-03 04:15:46.689  INFO 1701 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4609dd60, org.springframework.security.web.context.SecurityContextPersistenceFilter@23c50d41, org.springframework.security.web.header.HeaderWriterFilter@15429bb7, org.springframework.security.web.authentication.logout.LogoutFilter@a4bcedc, springsecuritysample.security.filter.UsernamePasswordJsonAuthenticationFilter@483e825d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62ead3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fc564b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3717051c, org.springframework.security.web.session.SessionManagementFilter@4598a160, org.springframework.security.web.access.ExceptionTranslationFilter@43fc1f1d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@801165b]
+2022-02-03 04:15:46.830  INFO 1701 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-02-03 04:15:47.836 ERROR 1701 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -869,8 +869,8 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.25.jar:8.0.25]
 	... 150 common frames omitted
 
-2022-02-03 04:00:50.801  INFO 1761 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
-2022-02-03 04:00:51.816 ERROR 1761 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Exception during pool initialization.
+2022-02-03 04:15:47.857  INFO 1701 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-02-03 04:15:48.863 ERROR 1701 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -1031,11 +1031,11 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.25.jar:8.0.25]
 	... 129 common frames omitted
 
-2022-02-03 04:00:51.822  WARN 1761 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcSessionDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/JdbcSessionConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
-2022-02-03 04:00:51.828  INFO 1761 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2022-02-03 04:15:48.864  WARN 1701 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcSessionDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/JdbcSessionConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+2022-02-03 04:15:48.867  INFO 1701 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-02-03 04:00:51.833 ERROR 1761 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2022-02-03 04:15:48.870 ERROR 1701 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcSessionDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/JdbcSessionConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.8.jar:5.3.8]
@@ -1212,7 +1212,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.25.jar:8.0.25]
 	... 129 common frames omitted
 
-2022-02-03 04:00:51.845 ERROR 1761 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@f1a00f1] to prepare test instance [springsecuritysample.security.LoginTest@1824b36]
+2022-02-03 04:15:48.873 ERROR 1701 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@124f57] to prepare test instance [springsecuritysample.security.LoginTest@5b176fe1]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.8.jar:5.3.8]
@@ -1401,7 +1401,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.2)
 
-2022-02-03 04:00:51.877  WARN 1761 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2022-02-03 04:15:48.906  WARN 1701 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -1410,16 +1410,16 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2022-02-03 04:00:51.878  INFO 1761 --- [    Test worker] springsecuritysample.security.LoginTest  : Starting LoginTest using Java 11.0.13 on fv-az93-644 with PID 1761 (started by runner in /home/runner/work/spring-security-sample/spring-security-sample)
-2022-02-03 04:00:51.879  INFO 1761 --- [    Test worker] springsecuritysample.security.LoginTest  : No active profile set, falling back to default profiles: default
-2022-02-03 04:00:52.124  INFO 1761 --- [    Test worker] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
-2022-02-03 04:00:52.338 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/api/login']
-2022-02-03 04:00:52.339 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/api/user']
-2022-02-03 04:00:52.339 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/api/admin']
-2022-02-03 04:00:52.340 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [denyAll] for any request
-2022-02-03 04:00:52.345  INFO 1761 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12b9c2fd, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e333dbf, org.springframework.security.web.header.HeaderWriterFilter@80720d3, org.springframework.security.web.authentication.logout.LogoutFilter@42b94331, springsecuritysample.security.filter.UsernamePasswordJsonAuthenticationFilter@1d1e9bb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b2f1365, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a1fbf6b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59eeff91, org.springframework.security.web.session.SessionManagementFilter@9d0de03, org.springframework.security.web.access.ExceptionTranslationFilter@3b8bde52, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f7d95a7]
-2022-02-03 04:00:52.538  INFO 1761 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
-2022-02-03 04:00:53.545 ERROR 1761 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Exception during pool initialization.
+2022-02-03 04:15:48.907  INFO 1701 --- [    Test worker] springsecuritysample.security.LoginTest  : Starting LoginTest using Java 11.0.13 on fv-az224-698 with PID 1701 (started by runner in /home/runner/work/spring-security-sample/spring-security-sample)
+2022-02-03 04:15:48.908  INFO 1701 --- [    Test worker] springsecuritysample.security.LoginTest  : No active profile set, falling back to default profiles: default
+2022-02-03 04:15:49.081  INFO 1701 --- [    Test worker] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2022-02-03 04:15:49.223 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/api/login']
+2022-02-03 04:15:49.224 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/api/user']
+2022-02-03 04:15:49.224 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/api/admin']
+2022-02-03 04:15:49.224 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [denyAll] for any request
+2022-02-03 04:15:49.228  INFO 1701 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ffd61d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@52268d64, org.springframework.security.web.header.HeaderWriterFilter@22a1cece, org.springframework.security.web.authentication.logout.LogoutFilter@75548d55, springsecuritysample.security.filter.UsernamePasswordJsonAuthenticationFilter@4609dc68, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@630bb19b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ff0c48a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32b4635b, org.springframework.security.web.session.SessionManagementFilter@3adcc1f6, org.springframework.security.web.access.ExceptionTranslationFilter@508c2211, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3684f0e4]
+2022-02-03 04:15:49.374  INFO 1701 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-02-03 04:15:50.380 ERROR 1701 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -1601,8 +1601,8 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.25.jar:8.0.25]
 	... 150 common frames omitted
 
-2022-02-03 04:00:53.585  INFO 1761 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
-2022-02-03 04:00:54.592 ERROR 1761 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Exception during pool initialization.
+2022-02-03 04:15:50.397  INFO 1701 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-02-03 04:15:51.403 ERROR 1701 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -1763,11 +1763,11 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.25.jar:8.0.25]
 	... 129 common frames omitted
 
-2022-02-03 04:00:54.594  WARN 1761 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcSessionDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/JdbcSessionConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
-2022-02-03 04:00:54.599  INFO 1761 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2022-02-03 04:15:51.412  WARN 1701 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcSessionDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/JdbcSessionConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+2022-02-03 04:15:51.415  INFO 1701 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-02-03 04:00:54.615 ERROR 1761 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2022-02-03 04:15:51.419 ERROR 1701 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcSessionDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/JdbcSessionConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.8.jar:5.3.8]
@@ -1944,7 +1944,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.25.jar:8.0.25]
 	... 129 common frames omitted
 
-2022-02-03 04:00:54.640 ERROR 1761 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@f1a00f1] to prepare test instance [springsecuritysample.security.LoginTest@278d19d4]
+2022-02-03 04:15:51.430 ERROR 1701 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@124f57] to prepare test instance [springsecuritysample.security.LoginTest@5555e79d]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.8.jar:5.3.8]
@@ -2133,7 +2133,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.2)
 
-2022-02-03 04:00:54.727  WARN 1761 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2022-02-03 04:15:51.462  WARN 1701 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -2142,16 +2142,16 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2022-02-03 04:00:54.738  INFO 1761 --- [    Test worker] springsecuritysample.security.LoginTest  : Starting LoginTest using Java 11.0.13 on fv-az93-644 with PID 1761 (started by runner in /home/runner/work/spring-security-sample/spring-security-sample)
-2022-02-03 04:00:54.747  INFO 1761 --- [    Test worker] springsecuritysample.security.LoginTest  : No active profile set, falling back to default profiles: default
-2022-02-03 04:00:55.166  INFO 1761 --- [    Test worker] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
-2022-02-03 04:00:55.419 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/api/login']
-2022-02-03 04:00:55.419 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/api/user']
-2022-02-03 04:00:55.419 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/api/admin']
-2022-02-03 04:00:55.419 DEBUG 1761 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [denyAll] for any request
-2022-02-03 04:00:55.426  INFO 1761 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3912f61a, org.springframework.security.web.context.SecurityContextPersistenceFilter@32179394, org.springframework.security.web.header.HeaderWriterFilter@626e9f77, org.springframework.security.web.authentication.logout.LogoutFilter@278c365a, springsecuritysample.security.filter.UsernamePasswordJsonAuthenticationFilter@14c89a80, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14b4c7a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2376765, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@129239e7, org.springframework.security.web.session.SessionManagementFilter@45ddd906, org.springframework.security.web.access.ExceptionTranslationFilter@443c4722, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f9c3701]
-2022-02-03 04:00:55.662  INFO 1761 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
-2022-02-03 04:00:56.668 ERROR 1761 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Exception during pool initialization.
+2022-02-03 04:15:51.463  INFO 1701 --- [    Test worker] springsecuritysample.security.LoginTest  : Starting LoginTest using Java 11.0.13 on fv-az224-698 with PID 1701 (started by runner in /home/runner/work/spring-security-sample/spring-security-sample)
+2022-02-03 04:15:51.463  INFO 1701 --- [    Test worker] springsecuritysample.security.LoginTest  : No active profile set, falling back to default profiles: default
+2022-02-03 04:15:51.697  INFO 1701 --- [    Test worker] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2022-02-03 04:15:51.886 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/api/login']
+2022-02-03 04:15:51.886 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/api/user']
+2022-02-03 04:15:51.887 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/api/admin']
+2022-02-03 04:15:51.887 DEBUG 1701 --- [    Test worker] edFilterInvocationSecurityMetadataSource : Adding web access control expression [denyAll] for any request
+2022-02-03 04:15:51.891  INFO 1701 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30980746, org.springframework.security.web.context.SecurityContextPersistenceFilter@679b0515, org.springframework.security.web.header.HeaderWriterFilter@390e8561, org.springframework.security.web.authentication.logout.LogoutFilter@6c14a254, springsecuritysample.security.filter.UsernamePasswordJsonAuthenticationFilter@511d4091, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bf4a9c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@169c0a5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a70c6d7, org.springframework.security.web.session.SessionManagementFilter@30feb7e9, org.springframework.security.web.access.ExceptionTranslationFilter@74890b4d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a9024d0]
+2022-02-03 04:15:52.151  INFO 1701 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-02-03 04:15:53.157 ERROR 1701 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -2332,8 +2332,8 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.25.jar:8.0.25]
 	... 150 common frames omitted
 
-2022-02-03 04:00:56.681  INFO 1761 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
-2022-02-03 04:00:57.687 ERROR 1761 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Exception during pool initialization.
+2022-02-03 04:15:53.179  INFO 1701 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-02-03 04:15:54.184 ERROR 1701 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -2493,11 +2493,11 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.25.jar:8.0.25]
 	... 129 common frames omitted
 
-2022-02-03 04:00:57.689  WARN 1761 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcSessionDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/JdbcSessionConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
-2022-02-03 04:00:57.691  INFO 1761 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2022-02-03 04:15:54.185  WARN 1701 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcSessionDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/JdbcSessionConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+2022-02-03 04:15:54.187  INFO 1701 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-02-03 04:00:57.696 ERROR 1761 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2022-02-03 04:15:54.191 ERROR 1701 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcSessionDataSourceInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/JdbcSessionConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.8.jar:5.3.8]
@@ -2673,7 +2673,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.25.jar:8.0.25]
 	... 129 common frames omitted
 
-2022-02-03 04:00:57.716 ERROR 1761 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@f1a00f1] to prepare test instance [springsecuritysample.security.LoginTest@7b117021]
+2022-02-03 04:15:54.204 ERROR 1701 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@124f57] to prepare test instance [springsecuritysample.security.LoginTest@4fe65e8e]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.8.jar:5.3.8]
@@ -2863,7 +2863,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.0.2</a> at Feb 3, 2022, 4:00:58 AM</p>
+<a href="http://www.gradle.org">Gradle 7.0.2</a> at Feb 3, 2022, 4:15:54 AM</p>
 </div>
 </div>
 </body>
