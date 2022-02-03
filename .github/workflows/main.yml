@@ -27,4 +27,4 @@ jobs:
           publish_dir: ./build/reports/tests/test
           destination_dir: ${{ env.BRANCH_NAME }}
           publish_branch: document
-          exclude_assets: ".github,.nojekyll,${{ env.BRANCH_NAME }}/js/**.js,${{ env.BRANCH_NAME }}/css/**.css"
+          exclude_assets: ".github,.nojekyll,js/**.js,css/**.css"
