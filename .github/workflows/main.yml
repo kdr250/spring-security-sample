@@ -25,6 +25,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/reports/tests/test
-          destination_dir: ${BRANCH_NAME}
+          destination_dir: ${{ env.BRANCH_NAME }}
           publish_branch: document
-          exclude_assets: ".github,${BRANCH_NAME}/js/**.js,${BRANCH_NAME}/css/**.css"
+          exclude_assets: ".github,.nojekyll,${{ env.BRANCH_NAME }}/js/**.js,${{ env.BRANCH_NAME }}/css/**.css"
