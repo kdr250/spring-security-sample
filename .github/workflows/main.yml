@@ -11,12 +11,15 @@ jobs:
         uses: actions/checkout@master
 
       - name: Test
-        run: ./gradlew test jacocoTestReport 
+        run: ./gradlew test jacocoTestReport
 
       - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
-        run: |
-          aws s3 cp --recursive --region ap-northeast-1 build/reports/tests/test s3://$S3_UPLOAD_BUCKET/
+          BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/reports/tests/test
+          destination_dir: $BRANCH_NAME
+          publish_branch: document
+          exclude_assets: '.github,build/reports/tests/test/**.js,build/reports/tests/test/**.css'
